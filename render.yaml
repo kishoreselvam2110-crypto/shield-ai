@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: shield-backend
+    env: node
+    plan: free
+    buildCommand: npm install --prefix backend
+    startCommand: node backend/server.js
+    healthCheckPath: /api/health
